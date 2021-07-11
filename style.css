@@ -1,0 +1,28 @@
+.retangulo{
+    width: 100px;
+    height: 20px;
+
+}
+.retanguloMaior{
+    width: 200px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+.retanguloMenor{
+    width: 115px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.outroRetangulo{
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.colorGray{
+    background-color: gray;
+}
+
+.colorRed{
+    background-color: red;
+}
