@@ -4,8 +4,6 @@ const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 39
     document.body.appendChild(document.createElement('header'))
     document.body.appendChild(document.createElement('main'))
 
-
-
 function imprimirResposta(nomekata, resposta){
 
     let h1 = document.querySelector('header').appendChild(document.createElement('h1'))
@@ -48,14 +46,6 @@ function invertArray(array){
         resposta.push(array[i])
     }
     return resposta
-}
-
-function escolheLoop(valor1, valor2){
-    if (valor1<valor2){
-        return loopadicição(valor1,valor2)
-    } else{
-        return loopsubtração(valor1,valor2)
-    }
 }
 
 function procuraPor(numeros, numero){

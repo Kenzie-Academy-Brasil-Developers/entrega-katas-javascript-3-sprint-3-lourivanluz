@@ -1,28 +1,20 @@
-.retangulo{
-    width: 100px;
-    height: 20px;
-
+body,p,h1{
+    background-color: lightblue;
+    font-family: sans-serif;
 }
-.retanguloMaior{
-    width: 200px;
-    height: 20px;
-    margin-bottom: 5px;
+header,main{
+    background-color: white;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
-.retanguloMenor{
-    width: 115px;
-    height: 20px;
-    margin-bottom: 5px;
+h1,p{
+    color: rgb(39, 38, 38);
+    background-color: white;
+    margin-left: 25px;
 }
-
-.outroRetangulo{
-    height: 20px;
-    margin-bottom: 5px;
-}
-
-.colorGray{
-    background-color: gray;
+p{
+    color: rgb(32, 11, 80);
+    border-bottom: 2px solid black;
 }
 
-.colorRed{
-    background-color: red;
-}
