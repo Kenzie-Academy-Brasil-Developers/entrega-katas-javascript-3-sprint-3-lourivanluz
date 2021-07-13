@@ -115,7 +115,7 @@ function kata6(valorInit=1,valorEnd=100,div = 3) {
     
 }
 
-function kata7(valorInit=100,valorEnd=1,divisor=[3,7]) {
+function kata7(valorInit=100,valorEnd=1,divisor=[7]) {
     // Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 
     //100: (99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)
     imprimirResposta('kata7',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
@@ -124,12 +124,12 @@ function kata7(valorInit=100,valorEnd=1,divisor=[3,7]) {
 function kata8(valorInit=1,valorEnd=100,divisor=[3,7]) {
     // Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 
     //100: (99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)
-    imprimirResposta('kata8',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
+    imprimirResposta('kata8',arrayDivisivelPor(invertArray((Selecionacontador(valorInit,valorEnd))),divisor))
 }
 
 function kata9(valorInit=1,valorEnd=100,divisor=[5]) {
     // Exibir os números ímpares divisíveis por 5 até o 100: (5, 15, 25, …, 85, 95)
-    imprimirResposta('kata9',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
+    imprimirResposta('kata9',imparFilter(arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor)))
 
 }
 
