@@ -27,7 +27,7 @@ function contador(valorInit,valorEnd){
 
         return contador(valor1,valor2)
     }
-    return contador(valor2,valor1)
+    return invertArray(contador(valor2,valor1))
 } 
 
 function imparFilter(array){
@@ -87,13 +87,14 @@ function kata1(valorInit=1,valorEnd=25) {
 
 function kata2(valorInit=25,valorEnd=1) {
     // Exibir os números de 25 a 1: (25, 24, 23, …, 2, 1)
-    imprimirResposta('kata2',(invertArray(Selecionacontador(valorInit,valorEnd))))
+    /* imprimirResposta('kata2',(invertArray(Selecionacontador(valorInit,valorEnd)))) */
+    imprimirResposta('kata2',(Selecionacontador(valorInit,valorEnd)))
         
 }
 
 function kata3(valorInit=-1,valorEnd=-25) {
     //Exibir os números de -1 a -25: (-1, -2, -3, …, -24, -25)
-    imprimirResposta('kata3',(invertArray(Selecionacontador(valorInit,valorEnd))))
+    imprimirResposta('kata3',(Selecionacontador(valorInit,valorEnd)))
 }
 
 function kata4(valorInit=-25,valorEnd=-1) {
@@ -104,7 +105,7 @@ function kata4(valorInit=-25,valorEnd=-1) {
 
 function kata5(valorInit=25,valorEnd=-25) {
     // Exibir os números ímpares de 25 a -25: (25, 23, 21, …, -23, -25)
-    imprimirResposta('kata5',imparFilter((invertArray(Selecionacontador(valorInit,valorEnd)))))
+    imprimirResposta('kata5',imparFilter(Selecionacontador(valorInit,valorEnd)))
 }
 
 function kata6(valorInit=1,valorEnd=100,div = 3) {
@@ -117,7 +118,7 @@ function kata6(valorInit=1,valorEnd=100,div = 3) {
 function kata7(valorInit=100,valorEnd=1,divisor=[3,7]) {
     // Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 
     //100: (99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)
-    imprimirResposta('kata7',arrayDivisivelPor((invertArray(Selecionacontador(valorInit,valorEnd))),divisor))
+    imprimirResposta('kata7',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
 }
 
 function kata8(valorInit=1,valorEnd=100,divisor=[3,7]) {
@@ -214,9 +215,11 @@ function estruturaDomBonus(pai='main',filha = 'div',classFilha = 'kataBonus1'){
     let elementoSelecionado = document.body.querySelector(pai)
     elementoSelecionado.appendChild(document.createElement(filha))
     let elementoMainChild  = document.querySelector(pai + '>' + filha + ':last-child')
-    elementoMainChild.setAttribute('class',classFilha)
+    elementoMainChild.setAttribute('class',classFilha+" titulo")
 }
 
+const borderGreyBold = "border-bottom:4px solid rgb(68, 68, 68);"
+const borderRedBold = "border-bottom:4px solid rgb(175, 4, 4);"
 
 
 function kataBonus1(num=20) {
@@ -230,7 +233,7 @@ function kataBonus1(num=20) {
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
         
         let retangulo = document.body.querySelector('.kataBonus1 > :nth-child('+(i+1)+')')
-        retangulo.setAttribute('style', 'width:100px; height:20px; background-color:grey; margin:5px 0')
+        retangulo.setAttribute('style', 'width:100px; height:20px; background-color:grey; margin:5px 0 ;'+borderGreyBold)
     }
 
 }
@@ -246,7 +249,7 @@ function kataBonus2(num=20) {
 
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
         let retangulo = document.body.querySelector('.kataBonus2 > :nth-child('+(i+1)+')')
-        retangulo.setAttribute('style','width:'+largura+'px; height:'+20+'px;background-color:grey; margin:5px 0')
+        retangulo.setAttribute('style','width:'+largura+'px; height:'+20+'px;background-color:grey; margin:5px 0;' + borderGreyBold)
         largura += 5
 
     }
@@ -263,7 +266,7 @@ function kataBonus3(num=20, array=sampleArray) {
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
         let retangulo = document.body.querySelector('.kataBonus3 > :nth-child('+(i+1)+')')
 
-        retangulo.setAttribute('style', 'width:'+ array[(i-1)]+'px; height:20px; background-color:grey; margin:5px 0')
+        retangulo.setAttribute('style', 'width:'+ array[(i-1)]+'px; height:20px; background-color:grey; margin:5px 0;'+ borderGreyBold)
         
     }
     // implemente o código do kata bonus 3 aqui
@@ -279,11 +282,13 @@ function kataBonus4(num=20, array=sampleArray) {
     for (let i = 1; i<=num; i++){
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
         let retangulo = document.body.querySelector('.kataBonus4 > :nth-child('+(i+1)+')')
-        let cor = 'grey'
+        let cor = "background-color:grey;"
+        let border = borderGreyBold
         if(i%2===0){
-            cor = 'red'
+            cor = "background-color:red;"
+            border = borderRedBold
         }
-        retangulo.setAttribute('style','height: 20px; margin-bottom: 5px; width:'+array[i-1]+'px; background-color:'+cor)
+        retangulo.setAttribute('style','height: 20px; margin-bottom: 5px; width:'+array[i-1]+'px;'+ cor + border)
     }
 }
 
@@ -297,11 +302,13 @@ function kataBonus5(num=20, array=sampleArray) {
     for (let i = 1; i<=num; i++){
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
         let retangulo = document.body.querySelector('.kataBonus5 > :nth-child('+(i+1)+')')
-        let cor = 'grey'
+        let cor = "background-color:grey;"
+        let border = borderGreyBold
         if(array[i-1]%2===0){
-            cor = 'red'
+            cor = "background-color:red;"
+            border = borderRedBold
         }
-        retangulo.setAttribute('style','height: 20px; margin-bottom: 5px; width:'+array[i-1]+'px; background-color:'+cor)
+        retangulo.setAttribute('style','height: 20px; margin-bottom: 5px; width:'+array[i-1]+'px;'+ cor + border)
 
     }
 }

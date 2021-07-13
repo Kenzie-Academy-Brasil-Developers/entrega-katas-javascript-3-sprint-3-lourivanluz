@@ -1,20 +1,38 @@
-body,p,h1{
-    background-color: lightblue;
+html,body,p,h1{
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
-header,main{
+html{
+    background-color: lightblue;
+}
+body{
     background-color: white;
     width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding: 15px;
+    box-shadow: 0px 7px 8px 1px rgba(0, 0, 0, 0.404);
 }
 h1,p{
     color: rgb(39, 38, 38);
-    background-color: white;
     margin-left: 25px;
+}
+h1{
+    margin-top: 15px;
 }
 p{
     color: rgb(32, 11, 80);
     border-bottom: 2px solid black;
+}
+main > div{
+    border-bottom: 2px solid black;
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+main > div > .titulo{
+    margin-bottom: 15px;
+
 }
 
