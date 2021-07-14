@@ -81,55 +81,72 @@ function arrayDivisivelPor(arrayNumeros,arrayDivisores){
 
 function kata1(valorInit=1,valorEnd=25) {
     // Exibir os números de 1 a 25: (1, 2, 3, …, 24, 25)
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd
     imprimirResposta('kata1',(Selecionacontador(valorInit,valorEnd)))
+    return result
 
 }
 
 function kata2(valorInit=25,valorEnd=1) {
     // Exibir os números de 25 a 1: (25, 24, 23, …, 2, 1)
     /* imprimirResposta('kata2',(invertArray(Selecionacontador(valorInit,valorEnd)))) */
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd
     imprimirResposta('kata2',(Selecionacontador(valorInit,valorEnd)))
-        
+    return result
 }
 
 function kata3(valorInit=-1,valorEnd=-25) {
     //Exibir os números de -1 a -25: (-1, -2, -3, …, -24, -25)
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd
     imprimirResposta('kata3',(Selecionacontador(valorInit,valorEnd)))
+    return result
 }
 
 function kata4(valorInit=-25,valorEnd=-1) {
     //Exibir os números de -25 a -1: (-25, -24, -23, …, -2, -1)
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd
     imprimirResposta('kata4',(Selecionacontador(valorInit,valorEnd)))
+    return result
 
 }
 
 function kata5(valorInit=25,valorEnd=-25) {
     // Exibir os números ímpares de 25 a -25: (25, 23, 21, …, -23, -25)
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd
     imprimirResposta('kata5',imparFilter(Selecionacontador(valorInit,valorEnd)))
+    return result
 }
 
 function kata6(valorInit=1,valorEnd=100,div = 3) {
     // Exibir os números divisíveis por 3 até o 100: (3, 6, 9, …, 96, 99)
  
+    let result =  'resolvido: contei de '+valorInit+' a '+ valorEnd+'divisivel por '+div
     imprimirResposta('kata6',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),[div]))
+    return result
     
 }
 
 function kata7(valorInit=100,valorEnd=1,divisor=[7]) {
     // Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 
     //100: (99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)
+    let result =  'resolvido: contei de '+valorInit+' a '+ valorEnd+'divisivel por '+divisor
     imprimirResposta('kata7',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
+    return result
 }
 
 function kata8(valorInit=1,valorEnd=100,divisor=[3,7]) {
     // Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 
     //100: (99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd+'divisivel por '+divisor
     imprimirResposta('kata8',arrayDivisivelPor(invertArray((Selecionacontador(valorInit,valorEnd))),divisor))
+    return result
 }
 
 function kata9(valorInit=1,valorEnd=100,divisor=[5]) {
     // Exibir os números ímpares divisíveis por 5 até o 100: (5, 15, 25, …, 85, 95)
+    let result = 'resolvido: contei de '+valorInit+' a '+ valorEnd+'divisivel por '+divisor
     imprimirResposta('kata9',imparFilter(arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor)))
+    return result
 
 }
 
@@ -139,21 +156,29 @@ function kata10(num=20, array=sampleArray) {
     for(let i = 0; i<num;i++){
         resposta.push(array[i])
     }
+    let result = 'resolvido: retornando' +num+ 'elementos do array'
     imprimirResposta('kata10',resposta)
+    return result
 }
 
 function kata11(array=sampleArray,divisor=2) {
     // Exibir todos os números pares contidos em sampleArray. (244, 758, 450, …, 940, 472)
+    let result = 'resolvido: retornando todos os elementos no array divisivis por '+divisor  
     imprimirResposta('kata11',arrayDivisivelPor(array,[divisor]))
+    return result
 }
 
 function kata12(array = sampleArray) {
+    let result = 'resolvido: retornando todos os elementos no array que for ímpar' 
     imprimirResposta('kata12',imparFilter(array))
+    return result
 }
 
 function kata13(array=sampleArray,divisor=8) {
     // Exibir os números divisíveis por 8 em sampleArray: (712, 456, …, 472)
+    let result = 'resolvido: retornando todos os elementos no array que for divisivel por '+divisor 
     imprimirResposta('kata13',arrayDivisivelPor(array,[divisor]))
+    return result
 }
 
 function kata14(array=sampleArray) {
@@ -162,7 +187,9 @@ function kata14(array=sampleArray) {
     for (let i = 0; i<array.length;i++){
         resposta.push(array[i]**2)
     }
+    let result = 'resolvido: retornando o quadrado de cada elemento no array' 
     imprimirResposta('kata14',resposta)
+    return result
 }
 
 function kata15(num=20) {
@@ -171,8 +198,9 @@ function kata15(num=20) {
     for (let i = 1; i<=num; i++){
         resposta += i
     }
+    let result = 'resolvido: restornando a soma de 1 a '+num
     imprimirResposta('kata15',resposta)
-
+    return result
 }
 
 function kata16(array =sampleArray) {
@@ -181,7 +209,9 @@ function kata16(array =sampleArray) {
     for(let i = 0; i<array.length; i++){
         resposta+= array[i]
     }
+    let result = 'resolvido: retornando a soma de todos os elementos do array' 
     imprimirResposta('kata16',resposta)
+    return result
 }
 
 function kata17(array = sampleArray) {
@@ -192,7 +222,9 @@ function kata17(array = sampleArray) {
             resposta = array[i]
         }
     }
+    let result = 'resolvido: retornando o menor elemento do array' 
     imprimirResposta('kata17',resposta)
+    return result
 }
 
 function kata18(array = sampleArray) {
@@ -203,7 +235,9 @@ function kata18(array = sampleArray) {
             resposta = array[i]
         }
     }
+    let result = 'resolvido: restornando o maior elemento do array' 
     imprimirResposta('kata18',resposta)
+    return result
 }
 
 /**
@@ -228,6 +262,7 @@ function kataBonus1(num=20) {
     estruturaDomBonus('.kataBonus1','h1','tituloKatabonus1') 
     let titulo = document.querySelector('.tituloKatabonus1')
     titulo.innerHTML = "KataBonus1" 
+    let result ='resolvido: barras adicionadas'
 
      for (let i = 1; i<=num; i++){
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
@@ -235,6 +270,7 @@ function kataBonus1(num=20) {
         let retangulo = document.body.querySelector('.kataBonus1 > :nth-child('+(i+1)+')')
         retangulo.setAttribute('style', 'width:100px; height:20px; background-color:grey; margin:5px 0 ;'+borderGreyBold)
     }
+    return result
 
 }
 
@@ -245,6 +281,7 @@ function kataBonus2(num=20) {
     let titulo = document.querySelector('.tituloKatabonus2')
     titulo.innerHTML = "kataBonus2" 
     let largura = 105
+    let result ='resolvido: barras adicionadas'
     for (let i = 1; i<=num; i++){
 
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
@@ -253,6 +290,7 @@ function kataBonus2(num=20) {
         largura += 5
 
     }
+    return result
 }
 
 function kataBonus3(num=20, array=sampleArray) {
@@ -261,15 +299,17 @@ function kataBonus3(num=20, array=sampleArray) {
     estruturaDomBonus('.kataBonus3','h1','tituloKatabonus3') 
     let titulo = document.querySelector('.tituloKatabonus3')
     titulo.innerHTML = "kataBonus3"
+    let result ='resolvido: barras adicionadas'
 
     for (let i = 1; i<=num; i++){
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
         let retangulo = document.body.querySelector('.kataBonus3 > :nth-child('+(i+1)+')')
 
-        retangulo.setAttribute('style', 'width:'+ array[(i-1)]+'px; height:20px; background-color:grey; margin:5px 0;'+ borderGreyBold)
+       retangulo.setAttribute('style', 'width:'+ array[(i-1)]+'px; height:20px; background-color:grey; margin:5px 0;'+ borderGreyBold)
         
     }
     // implemente o código do kata bonus 3 aqui
+    return result
 }
 
 function kataBonus4(num=20, array=sampleArray) {
@@ -278,6 +318,7 @@ function kataBonus4(num=20, array=sampleArray) {
     estruturaDomBonus('.kataBonus4','h1','tituloKatabonus4') 
     let titulo = document.querySelector('.tituloKatabonus4')
     titulo.innerHTML = "kataBonus4"
+    let result ='resolvido: barras adicionadas'
 
     for (let i = 1; i<=num; i++){
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
@@ -290,6 +331,7 @@ function kataBonus4(num=20, array=sampleArray) {
         }
         retangulo.setAttribute('style','height: 20px; margin-bottom: 5px; width:'+array[i-1]+'px;'+ cor + border)
     }
+    return result
 }
 
 function kataBonus5(num=20, array=sampleArray) {
@@ -298,6 +340,7 @@ function kataBonus5(num=20, array=sampleArray) {
     estruturaDomBonus('.kataBonus5','h1','tituloKatabonus5') 
     let titulo = document.querySelector('.tituloKatabonus5')
     titulo.innerHTML = "kataBonus5"
+    let result ='resolvido: barras adicionadas'
 
     for (let i = 1; i<=num; i++){
         document.body.querySelector('main>div:last-child').appendChild(document.createElement('div'))
@@ -311,6 +354,7 @@ function kataBonus5(num=20, array=sampleArray) {
         retangulo.setAttribute('style','height: 20px; margin-bottom: 5px; width:'+array[i-1]+'px;'+ cor + border)
 
     }
+    return result
 }
 
 
