@@ -127,8 +127,8 @@ function kata6(valorInit=1,valorEnd=100,div = 3) {
 function kata7(valorInit=100,valorEnd=1,divisor=[7]) {
     // Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 
     //100: (99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)
-    imprimirResposta('kata7',arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
-    let result =  arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor)
+    imprimirResposta('kata7',invertArray(arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor)))
+    let result =  invertArray(arrayDivisivelPor((Selecionacontador(valorInit,valorEnd)),divisor))
     return result
 }
 
